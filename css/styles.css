@@ -45,6 +45,8 @@ img {
 }
 /* ======END БАЗОВЫЙ СБРОС========= */
 
+/* =========COMPONENTS============= */
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -63,7 +65,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* =========COMPONENTS============= */
 .logo-link {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -78,6 +79,19 @@ body {
 
 .title {
   margin-bottom: 50px;
+}
+/* скрывает заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /* ========END COMPONENTS=========== */
 
@@ -103,6 +117,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--body-color);
+  padding: 30px 0px;
 }
 
 .header-menu-link:hover,
@@ -117,6 +132,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  padding: 30px 0px;
 }
 
 .header-contact-link:hover,
@@ -227,6 +243,10 @@ body {
   margin-right: 30px;
 }
 
+.features-menu-item {
+  width: 270px;
+}
+
 /* ==========END FEATURES========== */
 
 /* ============ACTIVITY============ */
@@ -330,12 +350,21 @@ body {
   color: rgba(225, 225, 225, 0.6);
   margin-top: 20px;
 }
-
+/* отступы */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--background-color);
 }
+
+.llf {
+  margin-right: 0;
+}
+
+.contact-menu-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 /* ======END FOOTER=============== */
 
 /* =======PORTFOLIO================ */
@@ -365,7 +394,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .portfolio-button-menu-item:not(:last-child) {
@@ -406,6 +435,7 @@ body {
 .portfolio-list-content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 /* ======END PORTFOLIO============= */
